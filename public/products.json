@@ -1,0 +1,57 @@
+[
+  {
+    "id": 1,
+    "name": "DOUBLE LAYER TIER",
+    "image": "https://i.ibb.co/3yWxzfC/DOBLE-TIER.png",
+    "description": "100% good quality tier",
+    "MinimumOrder": 1000,
+    "AvailableQuantity": 50000,
+    "price": 350
+  },
+  {
+    "id": 2,
+    "name": "BACK SPRING",
+    "image": "https://i.ibb.co/sFMhjW1/spring.jpg",
+    "description": "100% good quality spring",
+    "MinimumOrder": 1000,
+    "AvailableQuantity": 50000,
+    "price": 150
+  },
+  {
+    "id": 3,
+    "name": "FOOT REST",
+    "image": "https://i.ibb.co/nkpp0zb/footrest.jpg",
+    "description": "this is bike is so fast",
+    "MinimumOrder": 1000,
+    "AvailableQuantity": 50000,
+    "price": 250
+  },
+  {
+    "id": 4,
+    "name": "DOUBLE SEAT",
+    "image": "https://i.ibb.co/D81Xjyz/seat.jpg",
+    "description": "this is bike is so fast",
+    "MinimumOrder": 1000,
+    "AvailableQuantity": 50000,
+    "price": 320
+  },
+  {
+    "id": 5,
+    "name": "ENGINE 75",
+    "image": "https://i.ibb.co/cLdnBpz/engine.jpg",
+
+    "description": "this is bike is so fast",
+    "MinimumOrder": 1000,
+    "AvailableQuantity": 50000,
+    "price": 310
+  },
+  {
+    "id": 6,
+    "name": "HAND BREAK",
+    "image": "https://i.ibb.co/7r971Vr/moto2.jpg",
+    "description": "this is bike is so fast",
+    "MinimumOrder": 1000,
+    "AvailableQuantity": 50000,
+    "price": 35
+  }
+]

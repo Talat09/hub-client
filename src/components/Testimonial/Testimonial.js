@@ -3,8 +3,8 @@ import React from "react";
 const Testimonial = () => {
   return (
     <div className="testimonial">
-      <div class="avatar flex justify-center pt-40">
-        <div class="w-24 rounded-full ring ring-red-500 ring-offset-base-100">
+      <div className="avatar flex justify-center pt-40">
+        <div className="w-24 rounded-full ring ring-red-500 ring-offset-base-100">
           <img src="https://i.ibb.co/dmqnxys/1681152015415.jpg" alt="person" />
         </div>
       </div>
