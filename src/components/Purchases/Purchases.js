@@ -69,7 +69,7 @@ const Purchases = () => {
     };
 
     const { data: result } = await axiosPrivate.post(
-      "https://parts-bd-inc-server.vercel.app/order",
+      "http://localhost:5000/order",
       order
     );
     if (result.success) {

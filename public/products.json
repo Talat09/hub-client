@@ -1,6 +1,5 @@
 [
   {
-    "_id": 1,
     "name": "DOUBLE LAYER TIER",
     "image": "https://i.ibb.co/3yWxzfC/DOBLE-TIER.png",
     "description": "100% good quality tier",
@@ -9,7 +8,6 @@
     "price": 350
   },
   {
-    "_id": 2,
     "name": "BACK SPRING",
     "image": "https://i.ibb.co/sFMhjW1/spring.jpg",
     "description": "100% good quality spring",
@@ -18,7 +16,6 @@
     "price": 150
   },
   {
-    "_id": 3,
     "name": "FOOT REST",
     "image": "https://i.ibb.co/nkpp0zb/footrest.jpg",
     "description": "this is bike is so fast",
@@ -27,7 +24,6 @@
     "price": 250
   },
   {
-    "_id": 4,
     "name": "DOUBLE SEAT",
     "image": "https://i.ibb.co/D81Xjyz/seat.jpg",
     "description": "this is bike is so fast",
@@ -36,7 +32,6 @@
     "price": 320
   },
   {
-    "_id": 5,
     "name": "ENGINE 75",
     "image": "https://i.ibb.co/cLdnBpz/engine.jpg",
 
@@ -46,7 +41,6 @@
     "price": 310
   },
   {
-    "_id": 6,
     "name": "HAND BREAK",
     "image": "https://i.ibb.co/7r971Vr/moto2.jpg",
     "description": "this is bike is so fast",
