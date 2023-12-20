@@ -5,22 +5,22 @@ const Header = () => {
   const menu = (
     <>
       <li>
-        <Link className=" text-xl" to="/">
+        <Link className=" text-xl text-white" to="/">
           Home
         </Link>
       </li>
       <li>
-        <Link className="text-xl" to="/reviews">
+        <Link className="text-xl text-white" to="/reviews">
           Reviews
         </Link>
       </li>
       <li>
-        <Link className=" text-xl" to="/blogs">
+        <Link className=" text-xl text-white" to="/blogs">
           Blogs
         </Link>
       </li>
       <li>
-        <Link className="text-xl" to="/dashboard">
+        <Link className="text-xl text-white" to="/dashboard">
           Dashboard
         </Link>
       </li>
@@ -29,7 +29,7 @@ const Header = () => {
 
   return (
     <div>
-      <div className="navbar bg-base-300">
+      <div className="navbar bg-black">
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -57,7 +57,7 @@ const Header = () => {
           </div>
           <Link
             to="/"
-            className="btn btn-ghost normal-case text-black text-3xl "
+            className="btn btn-ghost normal-case text-white text-3xl "
           >
             Parts <span className="text-red-500">Masters</span>
           </Link>

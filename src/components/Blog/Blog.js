@@ -10,7 +10,7 @@ const Blog = () => {
           <hr className="border-[#363C45] w-16 md:w-40 h-[1px] mt-1" />
           <hr className="border-[#363C45] w-12 md:w-20 h-[1px] mt-1 ml-auto" />
         </div>
-        <h2 className="text-2xl md:text-3xl text-center uppercase font-semibold">
+        <h2 className="text-2xl md:text-3xl text-center uppercase font-semibold text-red-600">
           Latest Blog Post
         </h2>
         <div>

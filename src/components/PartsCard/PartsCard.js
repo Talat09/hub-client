@@ -1,21 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { FaCartPlus } from "react-icons/fa";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 const PartsCard = ({ parts }) => {
-  const {
-    id,
-    name,
-    image,
-    price,
-    description,
-    MinimumOrder,
-    AvailableQuantity,
-  } = parts;
+  const { _id, name, image, price, description, minOrder, available } = parts;
   return (
     <div
       data-aos="zoom-out-up"
       data-aos-duration="1000"
-      class="rounded-2xl border-2 border-[#21252c]"
+      className="rounded-2xl border-2 border-[#EF4444]"
     >
       <figure>
         <img
@@ -24,26 +17,25 @@ const PartsCard = ({ parts }) => {
           className="hover:scale-95 transition-all rounded-tl-2xl rounded-tr-2xl w-full"
         />
       </figure>
-      <div class="card-body pt-0 pl-3 mt-2 ">
-        <h2 class="card-title">{name}</h2>
-        <p className="mb-0">{description}</p>
-        <small>
+      <div className="card-body pt-0 pl-3 mt-2 ">
+        <h2 className="card-title text-white">{name}</h2>
+        <p className="mb-0 text-white">{description}</p>
+        <small className="text-white">
           Minimum order:{" "}
-          <span className="text-orange-600 font-bold">
-            {MinimumOrder} Piece
-          </span>
+          <span className="text-orange-600 font-bold">{minOrder} Piece</span>
         </small>
-        <small>
+        <small className="text-white">
           Available:{" "}
-          <span className="text-orange-600 font-bold">
-            {AvailableQuantity} Piece
-          </span>
+          <span className="text-orange-600 font-bold">{available} Piece</span>
         </small>
         <div className="flex justify-between items-center">
-          <p className="font-bold text-red-500">${price}</p>
-          <Link to={`/purchase/${id}`}>
-            <button className="btn btn-accent btn-sm hover:btn-primary hover:text-white">
-              Place Order <FaCartPlus className="ml-1"></FaCartPlus>
+          <small className=" text-white">
+            Price:
+            <span className="font-bold text-orange-600">${price}</span> Per Unit
+          </small>
+          <Link to={`/purchase/${_id}`}>
+            <button className="btn btn-primary btn-sm hover:btn-info hover:text-white">
+              Place Order <FontAwesomeIcon className="ml-1" icon={FaCartPlus} />
             </button>
           </Link>
         </div>
