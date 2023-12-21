@@ -1,49 +1,65 @@
-import React from "react";
+import React, { useState } from "react";
 import { useQuery } from "react-query";
 import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import PartsCard from "../PartsCard/PartsCard";
+import LoadingSpinner from "../Shared/LoadingSpinner/LoadingSpinner";
+import axiosPrivate from "../../api/axiosPrivate";
 // import axiosPrivate from "../../api/axiosPrivate";
 const FeatureParts = () => {
-  // const [page, setPage] = useState(0);
-  // const [size, setSize] = useState(4);
+  const [page, setPage] = useState(0);
+  const [size, setSize] = useState(4);
 
-  // const getParts = async ({ queryKey }) => {
-  //   const { data } = await axiosPrivate.get(
-  //     `products.json/parts?page=${queryKey[1]}&size=${queryKey[2]}`
-  //   );
-  //   return data;
-  // };
-  const { data: products = [] } = useQuery({
-    queryKey: ["products"],
-    queryFn: async () => {
-      const res = await fetch("http://localhost:5000/parts");
-      const data = await res.json();
-      const result = data.data;
-      return result;
-    },
+  const getParts = async ({ queryKey }) => {
+    const { data } = await axiosPrivate.get(
+      `http://localhost:5000/parts?page=${queryKey[1]}&size=${queryKey[2]}`
+    );
+    return data;
+  };
+  const { data, isLoading } = useQuery(["parts", page, size], getParts, {
+    keepPreviousData: true,
   });
 
+  if (isLoading) {
+    return <LoadingSpinner />;
+  }
   // console.log(products?.length);
   return (
     <div className="max-w-7xl mx-auto px-7 lg:px-10 mt-14 mb-10">
       <div className="flex justify-between items-center border-b-2">
-        <h4 className="text-3xl text-red-500 font-semibold">
-          Featured Products
-        </h4>
-        <div id="featured" className="flex items-center ">
-          <button className="btn btn-primary btn-xs">All</button>
-          <button className="btn btn-link btn-xs text-white p-1 px-2 ml-1 bg-primary hover:bg-black">
-            <FaChevronLeft></FaChevronLeft>
+        <h4 className="text-xl font-semibold">Featured Products</h4>
+        <div id="featured" className="flex items-center">
+          <button
+            onClick={() => setSize(10)}
+            className="btn btn-secondary btn-xs"
+          >
+            All
           </button>
-          <button className="btn btn-link btn-xs text-white p-1 px-2 ml-1 bg-primary hover:bg-black">
-            <FaChevronRight></FaChevronRight>
+          <button
+            disabled={page === 0}
+            onClick={() => setPage(page > 0 && page - 1)}
+            className={`btn btn-link btn-xs text-white p-1 px-2 ml-1 hover:bg-primary ${
+              page === 0 ? "bg-red-400" : "bg-primary"
+            }`}
+          >
+            <FontAwesomeIcon icon={FaChevronLeft} />
+          </button>
+          <button
+            disabled={page === 6}
+            onClick={() => setPage(page < 6 && page + 1)}
+            className={`btn btn-link btn-xs text-white p-1 px-2 ml-1 hover:bg-primary ${
+              page >= 6 ? "bg-red-400" : "bg-primary"
+            }`}
+          >
+            {" "}
+            <FontAwesomeIcon icon={FaChevronRight} />
           </button>
         </div>
       </div>
 
       <div className="grid lg:grid-cols-4 gap-7 mt-8">
-        {products?.map((parts, index) => (
-          <PartsCard parts={parts} key={index} />
+        {data?.data?.map((parts) => (
+          <PartsCard parts={parts} />
         ))}
       </div>
     </div>

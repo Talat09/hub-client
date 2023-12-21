@@ -6,6 +6,8 @@ import Reviews from "../../components/Reviews/Reviews";
 import Purchases from "../../components/Purchases/Purchases";
 import Login from "../../components/Login/Login";
 import SignUp from "../../components/Login/SignUp";
+import BestSeller from "../../components/BestSeller/BestSeller";
+import TopRated from "../../components/TopRated/TopRated";
 
 export const router = createBrowserRouter([
   {
@@ -15,6 +17,16 @@ export const router = createBrowserRouter([
       {
         path: "/",
         element: <Home></Home>,
+        children: [
+          {
+            path: "/",
+            element: <BestSeller />,
+          },
+          {
+            path: "/top-rated",
+            element: <TopRated />,
+          },
+        ],
       },
       {
         path: "/blogs",
@@ -25,7 +37,7 @@ export const router = createBrowserRouter([
         element: <Purchases />,
       },
       {
-        path: "/reviews",
+        path: "/review",
         element: <Reviews></Reviews>,
       },
       {
