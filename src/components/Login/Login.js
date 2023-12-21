@@ -120,7 +120,7 @@ const Login = () => {
             </Link>
           </button>
         </form>
-        <div class="divider">OR</div>
+        <div className="divider">OR</div>
         <div className="form-control">
           <button
             onClick={() => signInWithGoogle()}
