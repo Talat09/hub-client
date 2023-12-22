@@ -16,6 +16,7 @@ const Home = () => {
       <FeatureParts></FeatureParts>
       <Offers />
       <Testimonial></Testimonial>
+
       <BusinessSummary></BusinessSummary>
       <Blog></Blog>
       <Subscription></Subscription>

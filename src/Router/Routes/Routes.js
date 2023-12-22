@@ -8,6 +8,8 @@ import Login from "../../components/Login/Login";
 import SignUp from "../../components/Login/SignUp";
 import BestSeller from "../../components/BestSeller/BestSeller";
 import TopRated from "../../components/TopRated/TopRated";
+import Dashboard from "../../components/Dashboard/Dashboard";
+import AddReview from "../../components/Dashboard/AddReview/AddReview";
 
 export const router = createBrowserRouter([
   {
@@ -47,6 +49,16 @@ export const router = createBrowserRouter([
       {
         path: "/signup",
         element: <SignUp />,
+      },
+      {
+        path: "/dashboard",
+        element: <Dashboard />,
+        children: [
+          {
+            path: "/dashboard/add-review",
+            element: <AddReview />,
+          },
+        ],
       },
     ],
   },
