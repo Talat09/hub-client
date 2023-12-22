@@ -4,7 +4,7 @@ import axiosPrivate from "../../api/axiosPrivate";
 import { useQuery } from "react-query";
 import LoadingSpinner from "../Shared/LoadingSpinner/LoadingSpinner";
 import PartsCard from "../PartsCard/PartsCard";
-
+import "./Offers.css";
 const Offers = () => {
   const { pathname } = useLocation();
   const getParts = async () => {

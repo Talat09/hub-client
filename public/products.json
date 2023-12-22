@@ -5,7 +5,7 @@
     "description": "100% good quality tier",
     "minOrder": 1000,
     "available": 100000,
-    "price": 350
+    "price": 49
   },
   {
     "name": "BACK SPRING",
@@ -21,7 +21,7 @@
     "description": "this is bike is so fast",
     "minOrder": 1000,
     "available": 50000,
-    "price": 250
+    "price": 25
   },
   {
     "name": "DOUBLE SEAT",
@@ -29,7 +29,7 @@
     "description": "this is bike is so fast",
     "minOrder": 1000,
     "available": 50000,
-    "price": 320
+    "price": 32
   },
   {
     "name": "ENGINE 75",
@@ -45,7 +45,31 @@
     "image": "https://i.ibb.co/7r971Vr/moto2.jpg",
     "description": "this is bike is so fast",
     "minOrder": 1000,
+    "available": 56000,
+    "price": 23
+  },
+  {
+    "name": "MOTORBIKE TRANSMISSION",
+    "image": "https://i.ibb.co/5nLsgcm/gear.jpg",
+    "description": "this is bike is so fast",
+    "minOrder": 1000,
     "available": 50000,
-    "price": 35
+    "price": 21
+  },
+  {
+    "name": "OIL TANK",
+    "image": "https://i.ibb.co/5nLsgcm/gear.jpg",
+    "description": "this is bike is so fast",
+    "minOrder": 1000,
+    "available": 50000,
+    "price": 38
+  },
+  {
+    "name": "LOOKING GLASS",
+    "image": "https://i.ibb.co/mDPkxGx/2eb3981d88af0aedc0923d1264466a59.jpg",
+    "description": "this is bike is so fast",
+    "minOrder": 1000,
+    "available": 60000,
+    "price": 55
   }
 ]

@@ -1,0 +1,105 @@
+.deals {
+  background: rgba(0, 0, 0, 0.8) url("../../assets/sale.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: darken;
+}
+
+.offers {
+  display: grid;
+  grid-template-columns: 2fr 7fr;
+  gap: 40px;
+}
+
+.offers .offers-bg {
+  background: rgba(0, 0, 0, 0.7) url("../../assets/tire.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: darken;
+  border-radius: 5px;
+  color: white;
+  text-align: center;
+}
+
+.offers .offers-bg p:first-child {
+  margin-top: 40px;
+}
+
+.offers .offers-bg p {
+  margin-bottom: 10px;
+}
+
+.testimonial {
+  background: url("../../assets/test_bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.desc {
+  max-width: 750px;
+  margin: 25px auto 0;
+  font-size: 13px;
+  line-height: 24px;
+  color: #90939c;
+  font-family: "Rubik", sans serif;
+  position: relative;
+}
+
+.desc::before,
+.desc::after {
+  background-color: transparent;
+  background-position-y: top;
+  background-repeat: no-repeat;
+  background-attachment: scroll;
+  background-image: url("../../assets/comma.png");
+  background-size: auto;
+  background-origin: padding-box;
+  background-clip: border-box;
+  content: "";
+  width: 51px;
+  height: 41px;
+  position: absolute;
+  top: 0;
+}
+.desc::before {
+  background-position-x: left;
+  left: -90px;
+}
+.desc::after {
+  background-position-x: right;
+  right: -90px;
+}
+
+@media only screen and (max-width: 380px) {
+  .offers {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0 28px;
+  }
+  .offers .offers-bg {
+    height: 500px;
+  }
+  .desc::before,
+  .desc::after {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 381px) and (max-width: 576px) {
+  .offers {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0 35px;
+  }
+  .offers .offers-bg {
+    height: 500px;
+  }
+  .desc::before,
+  .desc::after {
+    display: none;
+  }
+}
