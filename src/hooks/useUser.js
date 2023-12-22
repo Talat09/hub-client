@@ -9,7 +9,7 @@ const useUser = (user) => {
       if (user) {
         const email = user.email;
         const { data } = await axiosPrivate.get(
-          `http://localhost:5000/user/${email}`
+          `https://parts-master-server.vercel.app/user/${email}`
         );
         setUserDetails(data.user);
       }

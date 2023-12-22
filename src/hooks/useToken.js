@@ -9,7 +9,7 @@ const useToken = (user) => {
       if (user) {
         const { email, displayName } = user?.user;
         const { data } = await axios.put(
-          `http://localhost:5000/user/${email}`,
+          `https://parts-master-server.vercel.app/user/${email}`,
           {
             email,
             name: displayName,

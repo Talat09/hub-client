@@ -8,7 +8,7 @@ const PartsCard = ({ parts }) => {
     <div
       data-aos="zoom-out-up"
       data-aos-duration="1000"
-      className="rounded-2xl border-2 border-[#EF4444]"
+      className="rounded-2xl border-2 border-[#FF0000]"
     >
       <figure>
         <img
@@ -22,20 +22,21 @@ const PartsCard = ({ parts }) => {
         <p className="mb-0 text-white">{description}</p>
         <small className="text-white">
           Minimum order:{" "}
-          <span className="text-orange-600 font-bold">{minOrder} Piece</span>
+          <span className="text-[#FF0000] font-bold">{minOrder} </span>Piece
         </small>
         <small className="text-white">
           Available:{" "}
-          <span className="text-orange-600 font-bold">{available} Piece</span>
+          <span className="text-[#FF0000] font-bold">{available} </span>Piece
         </small>
         <div className="flex justify-between items-center">
           <small className=" text-white">
             Price:
-            <span className="font-bold text-orange-600">${price}</span> Per Unit
+            <span className="font-bold text-[#FF0000]"> ${price} </span>
+            Unit
           </small>
           <Link to={`/purchase/${_id}`}>
-            <button className="btn btn-primary btn-sm hover:btn-info hover:text-white">
-              Place Order <FontAwesomeIcon className="ml-1" icon={FaCartPlus} />
+            <button className="btn btn-primary btn-sm hover:bg-gray-500 hover:text-white hover:border-none">
+              Order now <FontAwesomeIcon className="ml-1" icon={FaCartPlus} />
             </button>
           </Link>
         </div>

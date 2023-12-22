@@ -37,7 +37,9 @@ const Purchases = () => {
 
   useEffect(() => {
     const getParts = async () => {
-      const { data } = await axios.get(`http://localhost:5000/parts/${id}`);
+      const { data } = await axios.get(
+        `https://parts-master-server.vercel.app/parts/${id}`
+      );
       if (data) {
         console.log(data);
         setParts(data);
@@ -69,7 +71,7 @@ const Purchases = () => {
     };
 
     const { data: result } = await axiosPrivate.post(
-      "http://localhost:5000/order",
+      "https://parts-master-server.vercel.app/order",
       order
     );
     if (result.success) {
@@ -82,7 +84,7 @@ const Purchases = () => {
   return (
     <div className="min-h-screen bg-base-200 pb-20 lg:pb-0 text-neutral">
       <SetTitle title={"Purchase"} />
-      <h2 className="text-3xl font-semibold text-center pt-8 md:pt-8 md:pb-10">
+      <h2 className="text-3xl font-semibold text-center pt-8 md:pt-8 md:pb-10 uppercase">
         Your selected item!
       </h2>
       <div class="flex flex-col md:flex-row justify-center items-center gap-10 px-6">
@@ -91,16 +93,14 @@ const Purchases = () => {
             <img src={image} className="h-60" alt={name} />
           </figure>
           <div class="card-body pt-0">
-            <h2 class="card-title">{name}</h2>
-            <small>
+            <h2 class="card-title font-bold">{name}</h2>
+            <small className="font-bold">
               Minimum order:{" "}
-              <span className="text-orange-600 font-bold">
-                {minOrder} Piece
-              </span>
+              <span className="text-[#FF0000] font-bold">{minOrder} Piece</span>
             </small>
-            <small>
+            <small className="font-bold">
               Available:{" "}
-              <span className="text-orange-600 font-bold">
+              <span className="text-[#FF0000] font-bold">
                 {available} Piece
               </span>
             </small>
@@ -184,10 +184,10 @@ const Purchases = () => {
             <div class="form-control">
               <button
                 disabled={quantity < minOrder || quantity > available}
-                className="btn btn-primary btn-md mt-4"
+                className="btn btn-primary btn-md mt-4 hover:btn-secondary"
                 type="submit"
               >
-                Place Order{" "}
+                Confirm Order{" "}
                 <FontAwesomeIcon className="ml-1" icon={faShoppingCart} />
               </button>
             </div>

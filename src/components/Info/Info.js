@@ -28,11 +28,11 @@ const Info = () => {
   ];
   return (
     <div className="max-w-7xl mx-auto lg:px-10">
-      <div className="grid lg:grid-cols-4 md:grid-col gap-7 lg:gap-5 my-8">
+      <div className="grid lg:grid-cols-4 md:grid-col gap-7 lg:gap-5 my-8 ">
         {items.map((item, index) => (
           <div
             key={index}
-            className="flex flex-col lg:flex-row justify-evenly items-center border p-3 border-red-500 bg-white rounded-md shadow-lg"
+            className="flex flex-col lg:flex-row justify-evenly items-center  p-3  bg-white rounded-md shadow-lg"
           >
             <img className="w-12" src={item.images} alt="item images" />
             <div>
@@ -44,7 +44,7 @@ const Info = () => {
           </div>
         ))}
       </div>
-      <hr className="divider hidden md:block bg-red-500 h-1" />
+      <div className="divider hidden md:block bg-[#FF0000]  h-[2px] w-full"></div>
     </div>
   );
 };

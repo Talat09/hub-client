@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import { useQuery } from "react-query";
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
+import {
+  faChevronLeft,
+  faChevronRight,
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import PartsCard from "../PartsCard/PartsCard";
 import LoadingSpinner from "../Shared/LoadingSpinner/LoadingSpinner";
@@ -12,7 +15,7 @@ const FeatureParts = () => {
 
   const getParts = async ({ queryKey }) => {
     const { data } = await axiosPrivate.get(
-      `http://localhost:5000/parts?page=${queryKey[1]}&size=${queryKey[2]}`
+      `https://parts-master-server.vercel.app/parts?page=${queryKey[1]}&size=${queryKey[2]}`
     );
     return data;
   };
@@ -26,8 +29,10 @@ const FeatureParts = () => {
   // console.log(products?.length);
   return (
     <div className="max-w-7xl mx-auto px-7 lg:px-10 mt-14 mb-10">
-      <div className="flex justify-between items-center border-b-2">
-        <h4 className="text-xl font-semibold">Featured Products</h4>
+      <div className="flex justify-between items-center border-b-2 border-[#FF0000]">
+        <h4 className="text-2xl font-semibold text-secondary uppercase mb-3">
+          Featured Products
+        </h4>
         <div id="featured" className="flex items-center">
           <button
             onClick={() => setSize(10)}
@@ -39,20 +44,20 @@ const FeatureParts = () => {
             disabled={page === 0}
             onClick={() => setPage(page > 0 && page - 1)}
             className={`btn btn-link btn-xs text-white p-1 px-2 ml-1 hover:bg-primary ${
-              page === 0 ? "bg-red-400" : "bg-primary"
+              page === 0 ? "bg-[#FF0000]" : "bg-primary"
             }`}
           >
-            <FontAwesomeIcon icon={FaChevronLeft} />
+            <FontAwesomeIcon icon={faChevronLeft} />
           </button>
           <button
             disabled={page === 6}
             onClick={() => setPage(page < 6 && page + 1)}
             className={`btn btn-link btn-xs text-white p-1 px-2 ml-1 hover:bg-primary ${
-              page >= 6 ? "bg-red-400" : "bg-primary"
+              page >= 6 ? "bg-[#FF0000]" : "bg-primary"
             }`}
           >
             {" "}
-            <FontAwesomeIcon icon={FaChevronRight} />
+            <FontAwesomeIcon icon={faChevronRight} />
           </button>
         </div>
       </div>

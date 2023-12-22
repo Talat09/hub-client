@@ -141,7 +141,7 @@ const Header = () => {
           </ul>
         </div>
         <Link to="/" className="btn btn-ghost normal-case text-white text-3xl ">
-          Parts <span className="text-red-500">Masters</span>
+          TOOLS <span className="text-[#FF0000]">MASTER</span>
         </Link>
       </div>
       <div className="navbar-end">
@@ -152,7 +152,7 @@ const Header = () => {
           <div className="dropdown dropdown-end">
             <label
               tabIndex="0"
-              className="w-10 h-10 flex justify-center items-center rounded-full uppercase  cursor-pointer bg-neutral"
+              className="w-10 h-10 flex justify-center items-center rounded-full uppercase  cursor-pointer bg-white"
             >
               {user?.displayName.split(" ")[0].slice(0, 1)}
               {user?.displayName.split(" ")[1]?.slice(0, 1)}
