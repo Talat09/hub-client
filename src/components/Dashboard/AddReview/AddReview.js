@@ -19,7 +19,7 @@ const AddReview = () => {
     };
 
     const { data } = await axiosPrivate.post(
-      "https://parts-bd-inc-server.vercel.app/review",
+      "http://localhost:5000/review",
       review
     );
     if (data.success) {

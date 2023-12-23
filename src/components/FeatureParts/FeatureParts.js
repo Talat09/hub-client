@@ -15,7 +15,7 @@ const FeatureParts = () => {
 
   const getParts = async ({ queryKey }) => {
     const { data } = await axiosPrivate.get(
-      `https://parts-master-server.vercel.app/parts?page=${queryKey[1]}&size=${queryKey[2]}`
+      `http://localhost:5000/parts?page=${queryKey[1]}&size=${queryKey[2]}`
     );
     return data;
   };

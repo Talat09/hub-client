@@ -10,7 +10,7 @@ const useAdmin = (user) => {
       if (user) {
         const email = user.email;
         const { data } = await axiosPrivate.get(
-          `https://parts-master-server.vercel.app/admin/${email}`
+          `http://localhost:5000/admin/${email}`
         );
         if (data) {
           setAdmin(data.admin);

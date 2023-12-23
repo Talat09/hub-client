@@ -12,15 +12,17 @@ import { PartsIdContext } from "../../App";
 // import auth from "../../Firebase/firebase.init";
 import SetTitle from "../Shared/SetTitle/SetTitle";
 import axios from "axios";
+import { useAuthState } from "react-firebase-hooks/auth";
+import auth from "../../Firebase/firebase.init";
 
 // user name,email address,address,phone
 //quantity field-->by default minimum quantity dekhabe --> eikhane quantity increase/decrease thakbe
 //increase er khetre available quantity er cheye baraite parbo nah
 //decrease er khetre minimum quantity er cheye komaite parbo nah
 const Purchases = () => {
-  // const [user] = useAuthState(auth);
+  const [user] = useAuthState(auth);
   const { id } = useParams();
-
+  console.log(id);
   const { setPartsId } = useContext(PartsIdContext);
   setPartsId(id);
   const [parts, setParts] = useState({});
@@ -37,9 +39,7 @@ const Purchases = () => {
 
   useEffect(() => {
     const getParts = async () => {
-      const { data } = await axios.get(
-        `https://parts-master-server.vercel.app/parts/${id}`
-      );
+      const { data } = await axios.get(`http://localhost:5000/parts/${id}`);
       if (data) {
         console.log(data);
         setParts(data);
@@ -69,9 +69,10 @@ const Purchases = () => {
       partsId: _id,
       paid: false,
     };
+    console.log("order from purchase page", order);
 
     const { data: result } = await axiosPrivate.post(
-      "https://parts-master-server.vercel.app/order",
+      "http://localhost:5000/order",
       order
     );
     if (result.success) {
@@ -80,7 +81,7 @@ const Purchases = () => {
       reset();
     }
   };
-  console.log(parts);
+  // console.log(parts);
   return (
     <div className="min-h-screen bg-base-200 pb-20 lg:pb-0 text-neutral">
       <SetTitle title={"Purchase"} />
@@ -111,6 +112,28 @@ const Purchases = () => {
           <form onSubmit={handleSubmit(onSubmit)} class="card-body">
             <div className="lg:flex lg:gap-6">
               <div>
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text">Name</span>
+                  </label>
+                  <input
+                    {...register("name")}
+                    readOnly
+                    value={user?.displayName}
+                    class="input input-bordered bg-base-200"
+                  />
+                </div>
+                <div class="form-control">
+                  <label class="label">
+                    <span class="label-text">Email</span>
+                  </label>
+                  <input
+                    {...register("email")}
+                    readOnly
+                    value={user?.email}
+                    class="input input-bordered bg-base-200"
+                  />
+                </div>
                 <div class="form-control">
                   <label class="label">
                     <span class="label-text">Quantity</span>
@@ -187,7 +210,7 @@ const Purchases = () => {
                 className="btn btn-primary btn-md mt-4 hover:btn-secondary"
                 type="submit"
               >
-                Confirm Order{" "}
+                Place Order{" "}
                 <FontAwesomeIcon className="ml-1" icon={faShoppingCart} />
               </button>
             </div>

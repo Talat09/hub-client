@@ -7,7 +7,7 @@ import PartsCard from "../PartsCard/PartsCard";
 const TopRated = () => {
   const getParts = async () => {
     const { data } = await axiosPrivate.get(
-      `https://parts-bd-inc-server.vercel.app/parts?page=0&size=10}`
+      `http://localhost:5000/parts?page=0&size=10}`
     );
     return data;
   };
