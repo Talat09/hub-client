@@ -7,6 +7,7 @@ import BusinessSummary from "../BusinessSummary/BusinessSummary";
 import Testimonial from "../Testimonial/Testimonial";
 import FeatureParts from "../FeatureParts/FeatureParts";
 import Offers from "../Offers/Offers";
+import LastSixReview from "../LastSixReview/LastSixReview";
 
 const Home = () => {
   return (
@@ -16,7 +17,7 @@ const Home = () => {
       <FeatureParts></FeatureParts>
       <Offers />
       <Testimonial></Testimonial>
-
+      <LastSixReview></LastSixReview>
       <BusinessSummary></BusinessSummary>
       <Blog></Blog>
       <Subscription></Subscription>
