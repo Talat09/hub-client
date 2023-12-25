@@ -14,7 +14,7 @@ const Dashboard = () => {
     return <LoadingSpinner />;
   }
   return (
-    <div class="drawer drawer-mobile max-w-7xl mx-auto mb-10 lg:mb-20 lg:px-10 p-4">
+    <div class="drawer drawer-mobile max-w-7xl mx-auto mb-10 lg:mb-20 lg:px-10 p-4 my-16">
       <input id="dashboard-drawer" type="checkbox" class="drawer-toggle" />
       <div class="drawer-content px-2 lg:px-4 py-1">
         <div className="border-2 border-[#21252c] rounded-lg">

@@ -105,7 +105,12 @@ const Purchases = () => {
                 {available} Piece
               </span>
             </small>
-            <p className="font-bold">Price: ${price}</p>
+            <small className="font-bold">
+              Price:
+              <span className="text-[#FF0000] font-bold ms-2">
+                ${price} Per Unit
+              </span>
+            </small>
           </div>
         </div>
         <div class="card w-full max-w-sm lg:max-w-lg shadow-2xl bg-base-100">

@@ -30,21 +30,23 @@ const AddReview = () => {
   return (
     <div>
       <SetTitle title={"Add Review"} />
-      <h2 className="text-2xl font-bold pt-4 pl-10 mb-2">Add Review</h2>
+      <h2 className="text-2xl font-bold pt-4 pl-10 mb-2 text-white">
+        Add Review
+      </h2>
       <hr className="border-[#21252c] h-[4px] mb-6 w-full" />
       <form
         onSubmit={(e) => reviewHandle(e)}
         className="card max-w-sm lg:max-w-sm shadow"
       >
         <div className="mb-4 pl-10">
-          <label className="font-bold">Ratings</label>
+          <label className="font-bold text-white">Ratings</label>
           <ReactStars
             count={5}
             onChange={setRating}
             size={24}
-            activeColor="#ffd700"
+            activeColor="#ff0000"
           />
-          <label className="font-bold block mt-2">Description</label>
+          <label className="font-bold block mt-2 text-white">Description</label>
           <textarea
             name="ratingDes"
             cols="30"

@@ -10,6 +10,7 @@ import BestSeller from "../../components/BestSeller/BestSeller";
 import TopRated from "../../components/TopRated/TopRated";
 import Dashboard from "../../components/Dashboard/Dashboard";
 import AddReview from "../../components/Dashboard/AddReview/AddReview";
+import MyOrders from "../../components/Dashboard/Orders/MyOrders";
 
 export const router = createBrowserRouter([
   {
@@ -57,6 +58,10 @@ export const router = createBrowserRouter([
           {
             path: "/dashboard/add-review",
             element: <AddReview />,
+          },
+          {
+            path: "/dashboard/my-orders",
+            element: <MyOrders />,
           },
         ],
       },
