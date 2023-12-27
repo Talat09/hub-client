@@ -15,6 +15,7 @@ import MyProfile from "../../components/Dashboard/MyProfile/MyProfile";
 import UpdateProfile from "../../components/Dashboard/MyProfile/UpdateProfile";
 import AllUsers from "../../components/Dashboard/AllUsers/AllUsers";
 import AddProduct from "../../components/Dashboard/AddProduct/AddProduct";
+import ManageProducts from "../../components/Dashboard/ManageProducts/ManageProducts";
 
 export const router = createBrowserRouter([
   {
@@ -82,6 +83,10 @@ export const router = createBrowserRouter([
           {
             path: "add-product",
             element: <AddProduct />,
+          },
+          {
+            path: "manage-products",
+            element: <ManageProducts />,
           },
         ],
       },
