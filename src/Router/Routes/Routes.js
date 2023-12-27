@@ -13,6 +13,7 @@ import AddReview from "../../components/Dashboard/AddReview/AddReview";
 import MyOrders from "../../components/Dashboard/Orders/MyOrders";
 import MyProfile from "../../components/Dashboard/MyProfile/MyProfile";
 import UpdateProfile from "../../components/Dashboard/MyProfile/UpdateProfile";
+import AllUsers from "../../components/Dashboard/AllUsers/AllUsers";
 
 export const router = createBrowserRouter([
   {
@@ -72,6 +73,10 @@ export const router = createBrowserRouter([
           {
             path: "user/update-profile",
             element: <UpdateProfile />,
+          },
+          {
+            path: "all-users",
+            element: <AllUsers />,
           },
         ],
       },
