@@ -14,6 +14,7 @@ import MyOrders from "../../components/Dashboard/Orders/MyOrders";
 import MyProfile from "../../components/Dashboard/MyProfile/MyProfile";
 import UpdateProfile from "../../components/Dashboard/MyProfile/UpdateProfile";
 import AllUsers from "../../components/Dashboard/AllUsers/AllUsers";
+import AddProduct from "../../components/Dashboard/AddProduct/AddProduct";
 
 export const router = createBrowserRouter([
   {
@@ -77,6 +78,10 @@ export const router = createBrowserRouter([
           {
             path: "all-users",
             element: <AllUsers />,
+          },
+          {
+            path: "add-product",
+            element: <AddProduct />,
           },
         ],
       },
