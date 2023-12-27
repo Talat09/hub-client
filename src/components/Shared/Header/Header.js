@@ -58,7 +58,7 @@ const Header = () => {
     <>
       <li>
         <NavLink
-          className="md:py-1 text-white hover:bg-gray-500 rounded-md"
+          className="md:py-1 text-white hover:bg-secondary hover:text-black rounded-md"
           to="/"
         >
           Home
@@ -66,7 +66,7 @@ const Header = () => {
       </li>
       <li>
         <NavLink
-          className="md:py-1  text-white hover:bg-gray-500 rounded-md"
+          className="md:py-1  text-white hover:bg-secondary hover:text-black rounded-md"
           to="/review"
         >
           Reviews
@@ -74,7 +74,7 @@ const Header = () => {
       </li>
       <li>
         <NavLink
-          className="md:py-1  text-white hover:bg-gray-500 rounded-md"
+          className="md:py-1  text-white hover:bg-secondary hover:text-black rounded-md"
           to="/blogs"
         >
           Blogs
@@ -84,7 +84,7 @@ const Header = () => {
         <>
           <li>
             <NavLink
-              className="md:py-1 text-white hover:bg-gray-500 rounded-md"
+              className="md:py-1 text-white hover:bg-secondary hover:text-black rounded-md"
               to="/dashboard"
             >
               Dashboard
@@ -163,7 +163,7 @@ const Header = () => {
             >
               <li>
                 <Link
-                  className={`hover:bg-gray-500 ${
+                  className={`hover:bg-primary ${
                     p === "/dashboard" && "border-[1px] border-info"
                   }`}
                   to="/dashboard"
@@ -175,7 +175,7 @@ const Header = () => {
                 <>
                   <li>
                     <Link
-                      className={`hover:bg-gray-500 ${
+                      className={`hover:bg-primary ${
                         p === "/dashboard/all-users" &&
                         "border-[1px] border-info"
                       }`}
@@ -186,18 +186,18 @@ const Header = () => {
                   </li>
                   <li>
                     <Link
-                      className={`hover:bg-info ${
+                      className={`hover:bg-primary ${
                         p === "/dashboard/manage-orders" &&
                         "border-[1px] border-info"
                       }`}
                       to="manage-orders"
                     >
-                      Manage All Orders
+                      Manage Orders
                     </Link>
                   </li>
                   <li>
                     <Link
-                      className={`hover:bg-info ${
+                      className={`hover:bg-primary ${
                         p === "/dashboard/manage-products" &&
                         "border-[1px] border-info"
                       }`}
@@ -208,7 +208,7 @@ const Header = () => {
                   </li>
                   <li>
                     <Link
-                      className={`hover:bg-info ${
+                      className={`hover:bg-primary ${
                         p === "/dashboard/add-product" &&
                         "border-[1px] border-info"
                       }`}
@@ -223,7 +223,7 @@ const Header = () => {
                 <>
                   <li>
                     <Link
-                      className={`hover:bg-gray-500 ${
+                      className={`hover:bg-primary ${
                         p === "/dashboard/my-orders" &&
                         "border-[1px] border-info"
                       }`}
@@ -234,7 +234,7 @@ const Header = () => {
                   </li>
                   <li>
                     <Link
-                      className={`hover:bg-gray-500 ${
+                      className={`hover:bg-primary ${
                         p === "/dashboard/add-review" &&
                         "border-[1px] border-info"
                       }`}

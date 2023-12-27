@@ -8,10 +8,10 @@ module.exports = {
     themes: [
       {
         partsInc: {
-          primary: "#FF0000",
-          secondary: "#3d4451",
+          primary: "#00BF63",
+          secondary: "#FFDE59",
           accent: "#000000",
-          neutral: "#3d4451",
+          neutral: "#FFDE59",
           "base-100": "#ffffff",
         },
       },

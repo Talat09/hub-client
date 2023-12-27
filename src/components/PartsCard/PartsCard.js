@@ -8,7 +8,7 @@ const PartsCard = ({ parts }) => {
     <div
       data-aos="zoom-out-up"
       data-aos-duration="1000"
-      className="rounded-2xl border-2 border-[#FF0000]"
+      className="rounded-2xl border-2 border-black bg-white"
     >
       <figure>
         <img
@@ -18,24 +18,24 @@ const PartsCard = ({ parts }) => {
         />
       </figure>
       <div className="card-body pt-0 pl-3 mt-2 ">
-        <h2 className="card-title text-white">{name}</h2>
-        <p className="mb-0 text-white">{description}</p>
-        <small className="text-white">
+        <h2 className="card-title text-black">{name}</h2>
+        <p className="mb-0 text-black">{description}</p>
+        <small className="text-black">
           Minimum order:{" "}
-          <span className="text-[#FF0000] font-bold">{minOrder} </span>Piece
+          <span className="text-black font-bold">{minOrder} </span>Piece
         </small>
-        <small className="text-white">
-          Available:{" "}
-          <span className="text-[#FF0000] font-bold">{available} </span>Piece
+        <small className="text-black">
+          Available: <span className="text-black font-bold">{available} </span>
+          Piece
         </small>
         <div className="flex justify-between items-center">
-          <small className=" text-white">
+          <small className=" text-black">
             Price:
-            <span className="font-bold text-[#FF0000]"> ${price} </span>
+            <span className="font-bold text-black"> ${price} </span>
             Unit
           </small>
           <Link to={`/purchase/${_id}`}>
-            <button className="btn btn-primary btn-sm hover:bg-gray-500 hover:text-white hover:border-none">
+            <button className="btn btn-primary btn-sm hover:bg-secondary text-white hover:text-black hover:border-none">
               Order now <FontAwesomeIcon className="ml-1" icon={FaCartPlus} />
             </button>
           </Link>
