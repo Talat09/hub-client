@@ -19,6 +19,8 @@ import ManageProducts from "../../components/Dashboard/ManageProducts/ManageProd
 import ManageAllOrders from "../../components/Dashboard/ManageAllOrders/ManageAllOrders";
 import RequireAuth from "../../components/Login/RequireAuth";
 import RequireAdmin from "../../components/Login/RequireAdmin";
+import Payment from "../../components/Dashboard/Payment/Payment";
+import AllPendingShippedUnpaidOrders from "../../components/Dashboard/AllPendingShippedUnpaidOrders/AllPendingShippedUnpaidOrders";
 
 export const router = createBrowserRouter([
   {
@@ -76,9 +78,42 @@ export const router = createBrowserRouter([
             element: <AddReview />,
           },
           {
+            path: "/dashboard/payment/:id",
+            element: <Payment />,
+          },
+          {
+            path: "/dashboard/payment/:id",
+            element: <Payment />,
+          },
+          {
+            path: "/dashboard/pending-orders",
+            element: (
+              <RequireAdmin>
+                <AllPendingShippedUnpaidOrders searchText="pending" />
+              </RequireAdmin>
+            ),
+          },
+          {
+            path: "/dashboard/shipped-orders",
+            element: (
+              <RequireAdmin>
+                <AllPendingShippedUnpaidOrders searchText="shipped" />
+              </RequireAdmin>
+            ),
+          },
+          {
+            path: "/dashboard/unpaid-orders",
+            element: (
+              <RequireAdmin>
+                <AllPendingShippedUnpaidOrders searchText="unpaid" />
+              </RequireAdmin>
+            ),
+          },
+          {
             path: "/dashboard/my-orders",
             element: <MyOrders />,
           },
+
           {
             path: "/dashboard",
             element: <MyProfile />,
