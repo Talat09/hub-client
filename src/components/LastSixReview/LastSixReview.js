@@ -20,19 +20,9 @@ const LastSixReview = () => {
   return (
     <div className="max-w-7xl mx-auto px-6 lg:px-10 mt-6 mb-20 md:mt-14">
       <div className="flex justify-center items-center gap-5 md:gap-10 mt-14">
-        <div>
-          <hr className="border-[#363C45] w-12 md:w-20 h-[1px] ml-auto" />
-          <hr className="border-[#363C45] w-16 md:w-40 h-[1px] mt-1" />
-          <hr className="border-[#363C45] w-12 md:w-20 h-[1px] mt-1 ml-auto" />
-        </div>
-        <h2 className="text-2xl md:text-3xl text-center uppercase font-semibold text-[#ff0000]">
+        <h2 className="text-2xl md:text-3xl text-center uppercase font-semibold text-primary">
           Customers Review
         </h2>
-        <div>
-          <hr className="border-[#363C45] w-12 md:w-20 h-[1px] mr-auto" />
-          <hr className="border-[#363C45] w-16 md:w-40 h-[1px] mt-1" />
-          <hr className="border-[#363C45] w-12 md:w-20 h-[1px] mt-1 mr-auto" />
-        </div>
       </div>
       <p className="text-center text-gray-400">What our customers say</p>
       <hr className="border-primary w-20 h-[1px] mx-auto" />
@@ -42,7 +32,7 @@ const LastSixReview = () => {
         {lastSixData.slice(0, 6).map((review, index) => (
           <div className="rounded-2xl border-2 border-primary flex items-center gap-5 p-5">
             <div class="avatar">
-              <div class="w-14 rounded-full">
+              <div class="w-14 rounded-full border-2 border-primary">
                 <img
                   src={`https://picsum.photos/200/300?random=${index}`}
                   alt="user"

@@ -17,6 +17,8 @@ import AllUsers from "../../components/Dashboard/AllUsers/AllUsers";
 import AddProduct from "../../components/Dashboard/AddProduct/AddProduct";
 import ManageProducts from "../../components/Dashboard/ManageProducts/ManageProducts";
 import ManageAllOrders from "../../components/Dashboard/ManageAllOrders/ManageAllOrders";
+import RequireAuth from "../../components/Login/RequireAuth";
+import RequireAdmin from "../../components/Login/RequireAdmin";
 
 export const router = createBrowserRouter([
   {
@@ -43,7 +45,11 @@ export const router = createBrowserRouter([
       },
       {
         path: "/purchase/:id",
-        element: <Purchases />,
+        element: (
+          <RequireAuth>
+            <Purchases />
+          </RequireAuth>
+        ),
       },
       {
         path: "/review",
@@ -59,7 +65,11 @@ export const router = createBrowserRouter([
       },
       {
         path: "/dashboard",
-        element: <Dashboard />,
+        element: (
+          <RequireAuth>
+            <Dashboard />
+          </RequireAuth>
+        ),
         children: [
           {
             path: "/dashboard/add-review",
@@ -79,7 +89,11 @@ export const router = createBrowserRouter([
           },
           {
             path: "all-users",
-            element: <AllUsers />,
+            element: (
+              <RequireAdmin>
+                <AllUsers />
+              </RequireAdmin>
+            ),
           },
           {
             path: "add-product",
@@ -87,7 +101,11 @@ export const router = createBrowserRouter([
           },
           {
             path: "manage-products",
-            element: <ManageProducts />,
+            element: (
+              <RequireAdmin>
+                <ManageProducts />
+              </RequireAdmin>
+            ),
           },
           {
             path: "manage-orders",

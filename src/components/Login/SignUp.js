@@ -51,14 +51,14 @@ const SignUp = () => {
 
   return (
     <div className="px-5">
-      <div className="card card-body max-w-sm lg:max-w-md mx-auto shadow mt-14 mb-20 border-2 border-[#21252c]">
+      <div className="card card-body max-w-sm lg:max-w-md mx-auto shadow mt-14 mb-20 border-2 border-primary">
         <SetTitle title={"Sign Up"} />
         <form onSubmit={handleSubmit(onSubmit)} className="text-black">
-          <h3 className="text-2xl font-semibold mb-1 text-white">Sign Up</h3>
+          <h3 className="text-2xl font-semibold mb-1 text-primary">Sign Up</h3>
           <hr />
           <div className="form-control">
             <label className="label">
-              <span className="label-text text-white">
+              <span className="label-text text-primary">
                 Name<span className="text-red"> *</span>
               </span>
             </label>
@@ -76,7 +76,7 @@ const SignUp = () => {
           </div>
           <div className="form-control">
             <label className="label">
-              <span className="label-text text-white">
+              <span className="label-text text-primary">
                 Email<span className="text-red"> *</span>
               </span>
             </label>
@@ -98,7 +98,7 @@ const SignUp = () => {
           </div>
           <div className="form-control">
             <label className="label">
-              <span className="label-text text-white">
+              <span className="label-text text-primary">
                 Password<span className="text-red"> *</span>
               </span>
             </label>
@@ -127,7 +127,7 @@ const SignUp = () => {
               Sign Up
             </button>
           </div>
-          <button className="label-text-alt text-left text-white">
+          <button className="label-text-alt text-left text-primary">
             Already have an account?
             <Link to="/login" className="hover:underline">
               <span className="ml-1 text-sky-600">Login</span>
@@ -138,7 +138,7 @@ const SignUp = () => {
         <div className="form-control">
           <button
             onClick={() => signInWithGoogle()}
-            className="btn btn-ghost btn-outline btn-info justify-evenly"
+            className="btn btn-ghost btn-outline btn-primary hover:btn-secondary justify-evenly"
           >
             <img className="h-8" src={googleLogo} alt="Google Sign in" />{" "}
             Continue with Google

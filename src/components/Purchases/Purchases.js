@@ -83,9 +83,9 @@ const Purchases = () => {
   };
   // console.log(parts);
   return (
-    <div className="min-h-screen bg-base-200 pb-20 lg:pb-0 text-neutral">
+    <div className="min-h-screen bg-base-200 pb-20 lg:pb-0 text-accent">
       <SetTitle title={"Purchase"} />
-      <h2 className="text-3xl font-semibold text-center pt-8 md:pt-8 md:pb-10 uppercase">
+      <h2 className="text-3xl font-semibold text-center pt-8 md:pt-8 md:pb-10 uppercase text-black">
         Your selected item!
       </h2>
       <div class="flex flex-col md:flex-row justify-center items-center gap-10 px-6">
@@ -97,17 +97,15 @@ const Purchases = () => {
             <h2 class="card-title font-bold">{name}</h2>
             <small className="font-bold">
               Minimum order:{" "}
-              <span className="text-[#FF0000] font-bold">{minOrder} Piece</span>
+              <span className="text-primary font-bold">{minOrder} Piece</span>
             </small>
             <small className="font-bold">
               Available:{" "}
-              <span className="text-[#FF0000] font-bold">
-                {available} Piece
-              </span>
+              <span className="text-primary font-bold">{available} Piece</span>
             </small>
             <small className="font-bold">
               Price:
-              <span className="text-[#FF0000] font-bold ms-2">
+              <span className="text-primary font-bold ms-2">
                 ${price} Per Unit
               </span>
             </small>
@@ -212,11 +210,14 @@ const Purchases = () => {
             <div class="form-control">
               <button
                 disabled={quantity < minOrder || quantity > available}
-                className="btn btn-primary btn-md mt-4 hover:btn-secondary"
+                className="btn btn-primary text-white btn-md mt-4 "
                 type="submit"
               >
                 Place Order{" "}
-                <FontAwesomeIcon className="ml-1" icon={faShoppingCart} />
+                <FontAwesomeIcon
+                  className="ml-1 text-white"
+                  icon={faShoppingCart}
+                />
               </button>
             </div>
           </form>

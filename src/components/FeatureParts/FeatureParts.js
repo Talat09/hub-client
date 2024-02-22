@@ -29,8 +29,8 @@ const FeatureParts = () => {
   // console.log(products?.length);
   return (
     <div className="max-w-7xl mx-auto px-7 lg:px-10 mt-14 mb-10">
-      <div className="flex justify-between items-center border-b-2 border-[#FF0000]">
-        <h4 className="text-2xl font-semibold text-secondary uppercase mb-3">
+      <div className="flex justify-between items-center border-b-2 border-primary">
+        <h4 className="text-2xl font-semibold text-primary uppercase mb-3">
           Featured Products
         </h4>
         <div id="featured" className="flex items-center">

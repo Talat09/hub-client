@@ -8,7 +8,7 @@ const PartsCard = ({ parts }) => {
     <div
       data-aos="zoom-out-up"
       data-aos-duration="1000"
-      className="rounded-2xl border-2 border-black bg-white"
+      className="rounded-2xl border-2 border-secondary bg-white relative"
     >
       <figure>
         <img
@@ -28,18 +28,17 @@ const PartsCard = ({ parts }) => {
           Available: <span className="text-black font-bold">{available} </span>
           Piece
         </small>
-        <div className="flex justify-between items-center">
-          <small className=" text-black">
-            Price:
-            <span className="font-bold text-black"> ${price} </span>
-            Unit
-          </small>
-          <Link to={`/purchase/${_id}`}>
-            <button className="btn btn-primary btn-sm hover:bg-secondary text-white hover:text-black hover:border-none">
-              Order now <FontAwesomeIcon className="ml-1" icon={FaCartPlus} />
-            </button>
-          </Link>
-        </div>
+
+        <small className=" text-black">
+          Price:
+          <span className="font-bold text-black"> ${price} </span>
+          Unit
+        </small>
+        <Link to={`/purchase/${_id}`}>
+          <button className="btn btn-primary btn-sm hover:bg-secondary text-white hover:text-black hover:border-none absolute bottom-2 right-5">
+            Order now <FontAwesomeIcon className="ml-1" icon={FaCartPlus} />
+          </button>
+        </Link>
       </div>
     </div>
   );

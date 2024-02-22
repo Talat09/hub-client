@@ -7,7 +7,7 @@ export const PartsIdContext = createContext();
 function App() {
   const [partsId, setPartsId] = useState("");
   return (
-    <div className=" mx-auto bg-black">
+    <div className=" mx-auto bg-white">
       <ToastContainer />
       <PartsIdContext.Provider value={{ partsId, setPartsId }}>
         <RouterProvider router={router}></RouterProvider>

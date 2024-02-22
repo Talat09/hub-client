@@ -42,7 +42,7 @@ const Footer = () => {
       className={`footer ${path ? "block" : "hidden"}`}
       style={{ background: `url(${footerBg})` }}
     >
-      <hr className="h-[2px] bg-[#ff0000] border-none" />
+      <hr className="h-[2px] bg-primary border-none" />
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10 max-w-7xl mx-auto px-7 py-14 lg:px-10 text-white">
         <div>
           <div>
@@ -80,7 +80,7 @@ const Footer = () => {
 
         <div className="lg:mx-auto">
           <p className="uppercase font-bold">Useful links</p>
-          <hr className="mt-2 h-[2px] w-6 bg-[#ff0000] border-none" />
+          <hr className="mt-2 h-[2px] w-6 bg-primary border-none" />
           <ul className="text-sm list-disc ml-3">
             <li>
               <Link to="/dashboard" className="flex items-center mt-3">
@@ -116,7 +116,7 @@ const Footer = () => {
 
         <div className="lg:mx-auto">
           <p className="uppercase font-bold">Find Us</p>
-          <hr className="mt-2 h-[2px] w-6 bg-[#ff0000] border-none" />
+          <hr className="mt-2 h-[2px] w-6 bg-primary border-none" />
           <ul className="text-sm list-disc ml-3">
             <li>
               <Link to="/all-cars" className="flex items-center mt-3">
@@ -152,7 +152,7 @@ const Footer = () => {
 
         <div className="lg:mx-auto">
           <p className="uppercase font-bold">About Us</p>
-          <hr className="mt-2 h-[2px] w-6 bg-[#ff0000] border-none" />
+          <hr className="mt-2 h-[2px] w-6 bg-primary border-none" />
           <ul className="text-sm list-disc ml-3">
             <li>
               <Link to="/all-cars" className="flex items-center mt-3">

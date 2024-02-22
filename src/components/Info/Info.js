@@ -1,27 +1,31 @@
 import React from "react";
-import service from "../../assets/icons/service.png";
-import hotoffer from "../../assets/icons/hot-offer.png";
-import securepayment from "../../assets/icons/secure-payment.png";
-import freedelivery from "../../assets/icons/free-delivery.png";
+// import service from "../../assets/icons/service.png";
+// import hotoffer from "../../assets/icons/hot-offer.png";
+// import securepayment from "../../assets/icons/secure-payment.png";
+// import freedelivery from "../../assets/icons/free-delivery.png";
+import { FaShippingFast, FaLock } from "react-icons/fa";
+import { BiPhoneCall } from "react-icons/bi";
+// import { TbLockPlus } from "react-icons/tb";
+import { MdOutlineLocalOffer } from "react-icons/md";
 const Info = () => {
   const items = [
     {
-      images: freedelivery,
+      icons: <FaShippingFast className="text-primary text-4xl" />,
       title: "Free shipping",
       des: "For orders from $50",
     },
     {
-      images: service,
+      icons: <BiPhoneCall className="text-primary text-4xl" />,
       title: "Support 24/7",
       des: "Call us anytime",
     },
     {
-      images: securepayment,
+      icons: <FaLock className="text-primary text-4xl" />,
       title: "100% Safety",
       des: "Only secure payments",
     },
     {
-      images: hotoffer,
+      icons: <MdOutlineLocalOffer className="text-primary text-4xl" />,
       title: "Hot Offers",
       des: "Discounts up to 90%",
     },
@@ -32,11 +36,12 @@ const Info = () => {
         {items.map((item, index) => (
           <div
             key={index}
-            className="flex flex-col lg:flex-row justify-evenly items-center  p-3  bg-white rounded-md shadow-lg"
+            className="flex flex-col lg:flex-row justify-evenly items-center  p-4  bg-white rounded-md shadow-lg "
           >
-            <img className="w-12" src={item.images} alt="item images" />
+            <div>{item.icons}</div>
+
             <div>
-              <h5 className="text-md font-semibold text-center lg:text-left">
+              <h5 className="text-md font-semibold text-center lg:text-left text-primary">
                 {item.title}
               </h5>
               <p className="text-sm">{item.des}</p>
@@ -44,7 +49,7 @@ const Info = () => {
           </div>
         ))}
       </div>
-      <div className="divider hidden md:block bg-[#FF0000]  h-[2px] w-full"></div>
+      <div className="divider hidden md:block bg-primary  h-[2px] w-full"></div>
     </div>
   );
 };
