@@ -35,6 +35,7 @@ const LastSixReview = () => {
               <div class="w-14 rounded-full border-2 border-primary">
                 <img
                   src={`https://picsum.photos/200/300?random=${index}`}
+                  loading="lazy"
                   alt="user"
                 />
               </div>

@@ -13,6 +13,7 @@ const PartsCard = ({ parts }) => {
       <figure>
         <img
           src={image}
+          loading="lazy"
           alt="Shoes"
           className="hover:scale-95 transition-all rounded-tl-2xl rounded-tr-2xl w-full"
         />

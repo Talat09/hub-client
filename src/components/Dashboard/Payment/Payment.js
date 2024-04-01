@@ -18,6 +18,7 @@ const Payment = () => {
     const { data } = await axiosPrivate.get(
       `http://localhost:5000/order/${queryKey[1]}`
     );
+    console.log(data);
     return data;
   };
   const { data, isLoading } = useQuery(["single-order", id], getOrder);
@@ -28,7 +29,7 @@ const Payment = () => {
   const { name, partsName, quantity, amount } = data;
 
   const stripePromise = loadStripe(
-    "pk_test_51L0VcfAnKHpPDONQvKZOdQdxd6pmUAxkviJRpt94NGZyOn1jVgDBdg6aGIjrP8gw4E5oGLGTpMHhjW2Jjacaroie00lZkaxl0c"
+    "pk_test_51MijiRJNxVPgVSwFCmB4sQnzSXw51Rhza5d7J5zDenN5EoXcEATUAMZwD3thnfO0W7kcBNGYWiNACbMcz50SDlVT009o2HG3Oz"
   );
 
   return (

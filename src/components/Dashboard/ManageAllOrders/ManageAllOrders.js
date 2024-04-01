@@ -38,7 +38,7 @@ const ManageAllOrders = () => {
     }
   };
   return (
-    <div className="shadow bg-[#FFDE59] rounded mb-6 lg:mb-0">
+    <div className="shadow bg-white rounded mb-6 lg:mb-0">
       <SetTitle title="Manage Orders" />
       <div className="flex justify-between items-center">
         <h2 className="text-2xl font-bold pt-4 pl-10 mb-2">
@@ -64,7 +64,7 @@ const ManageAllOrders = () => {
       </div>
       <hr className="border-[#21252c] h-[2px] mb-6" />
       <div class="overflow-x-auto">
-        <table class=" w-full mb-6 bg-[#FFDE59]">
+        <table class=" w-full mb-6 ">
           <thead>
             <tr className="text-black  text-center ">
               <th>Index</th>

@@ -30,31 +30,36 @@ const AddReview = () => {
   return (
     <div>
       <SetTitle title={"Add Review"} />
-      <h2 className="text-2xl font-bold pt-4 pl-10 mb-2 text-white">
+      <h2 className="text-2xl font-bold pt-4 pl-10 mb-2 text-primary">
         Add Review
       </h2>
       <hr className="border-[#21252c] h-[4px] mb-6 w-full" />
       <form
         onSubmit={(e) => reviewHandle(e)}
-        className="card max-w-sm lg:max-w-sm shadow"
+        className="card max-w-sm lg:max-w-sm shadow border-none"
       >
         <div className="mb-4 pl-10">
-          <label className="font-bold text-white">Ratings</label>
+          <label className="font-bold text-primary">Ratings</label>
           <ReactStars
             count={5}
             onChange={setRating}
             size={24}
-            activeColor="#ff0000"
+            activeColor="#00BF63"
           />
-          <label className="font-bold block mt-2 text-white">Description</label>
+          <label className="font-bold block mt-2 text-primary">
+            Description
+          </label>
+
           <textarea
             name="ratingDes"
             cols="30"
             rows="5"
             className="border-[1px] rounded-lg text-black mt-2 pl-4 pt-2"
           ></textarea>
-          <button className="btn btn-primary w-fit my-4">Submit</button>
         </div>
+        <button className="btn btn-primary text-white w-fit my-4 ms-6">
+          Submit
+        </button>
       </form>
     </div>
   );

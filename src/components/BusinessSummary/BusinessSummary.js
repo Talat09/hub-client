@@ -18,7 +18,7 @@ const BusinessSummary = () => {
       <hr className="border-primary w-12 h-[1px] mx-auto mt-1" />
       <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-10 my-14 md:mt-16 md:mb-24 md:px-24 text-center">
         <div>
-          <FaUserAlt className="w-12 h-12 text-xl text-primary bg-secondary mx-auto  rounded-full p-3"></FaUserAlt>
+          <FaUserAlt className="w-12 h-12 text-xl text-secondary bg-primary mx-auto  rounded-full p-3"></FaUserAlt>
           <p className="uppercase text-md font-[600] mt-2">Served Customer</p>
           <hr className="block mx-auto mt-2 h-[3px] w-24 bg-primary border-none" />
           <Counter end="380">
@@ -26,7 +26,7 @@ const BusinessSummary = () => {
           </Counter>
         </div>
         <div>
-          <FaDollarSign className="w-12 h-12 text-xl text-primary bg-secondary mx-auto rounded-full p-3"></FaDollarSign>
+          <FaDollarSign className="w-12 h-12 text-xl text-secondary bg-primary mx-auto rounded-full p-3"></FaDollarSign>
           <p className="uppercase text-md font-[600] mt-2">Annual Revenue</p>
           <hr className="block mx-auto mt-2 h-[3px] w-24 bg-primary border-none" />
           <Counter end="150">
@@ -34,7 +34,7 @@ const BusinessSummary = () => {
           </Counter>
         </div>
         <div>
-          <FaCommentAlt className="w-12 h-12 text-xl text-primary bg-secondary mx-auto rounded-full p-3"></FaCommentAlt>
+          <FaCommentAlt className="w-12 h-12 text-xl text-secondary bg-primary mx-auto rounded-full p-3"></FaCommentAlt>
           <p className="uppercase text-md font-[600] mt-2">Total Reviews</p>
           <hr className="block mx-auto mt-2 h-[3px] w-24 bg-primary border-none" />
           <Counter end="1150">
@@ -42,7 +42,7 @@ const BusinessSummary = () => {
           </Counter>
         </div>
         <div>
-          <FaTools className="w-12 h-12 text-xl text-primary mx-auto bg-secondary rounded-full p-3"></FaTools>
+          <FaTools className="w-12 h-12 text-xl text-secondary bg-primary mx-auto  rounded-full p-3"></FaTools>
           <p className="uppercase text-md font-[600] mt-2">
             Parts Manufacturing
           </p>

@@ -6,7 +6,7 @@ import { useContext, useEffect, useState } from "react";
 // import { useAuthState } from "react-firebase-hooks/auth";
 import { useForm } from "react-hook-form";
 import { useParams } from "react-router-dom";
-import { toast } from "react-toastify";
+
 import axiosPrivate from "../../api/axiosPrivate";
 import { PartsIdContext } from "../../App";
 // import auth from "../../Firebase/firebase.init";
@@ -14,6 +14,7 @@ import SetTitle from "../Shared/SetTitle/SetTitle";
 import axios from "axios";
 import { useAuthState } from "react-firebase-hooks/auth";
 import auth from "../../Firebase/firebase.init";
+import toast from "react-hot-toast";
 
 // user name,email address,address,phone
 //quantity field-->by default minimum quantity dekhabe --> eikhane quantity increase/decrease thakbe
@@ -91,7 +92,7 @@ const Purchases = () => {
       <div class="flex flex-col md:flex-row justify-center items-center gap-10 px-6">
         <div class="card w-full max-w-sm lg:max-w-sm bg-base-100 shadow-lg mt-8 md:mt-0">
           <figure>
-            <img src={image} className="h-60" alt={name} />
+            <img src={image} className="h-60" loading="lazy" alt={name} />
           </figure>
           <div class="card-body pt-0">
             <h2 class="card-title font-bold">{name}</h2>

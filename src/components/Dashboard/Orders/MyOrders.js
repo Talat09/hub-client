@@ -29,14 +29,14 @@ const MyOrders = () => {
   return (
     <div class="overflow-x-auto shadow rounded-xl pb-6">
       <SetTitle title={"My Orders"} />
-      <h2 className="text-2xl font-bold pt-4 pl-10 mb-2 text-white">
+      <h2 className="text-2xl font-bold pt-4 pl-10 mb-2 text-primary">
         My Orders
       </h2>
       <hr className="border-[#21252c] h-[1px] mb-6" />
       {data.length ? (
         <table class="table w-full">
           <thead>
-            <tr className="text-neutral">
+            <tr className="text-primary">
               <th></th>
               <th>Name</th>
               <th>Quantity</th>

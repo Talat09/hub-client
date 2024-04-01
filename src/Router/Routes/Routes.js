@@ -21,6 +21,8 @@ import RequireAuth from "../../components/Login/RequireAuth";
 import RequireAdmin from "../../components/Login/RequireAdmin";
 import Payment from "../../components/Dashboard/Payment/Payment";
 import AllPendingShippedUnpaidOrders from "../../components/Dashboard/AllPendingShippedUnpaidOrders/AllPendingShippedUnpaidOrders";
+import MyPortfolio from "../../components/MyPortfolio/MyPortfolio";
+import NotFound from "../../components/NotFound/NotFound";
 
 export const router = createBrowserRouter([
   {
@@ -44,6 +46,10 @@ export const router = createBrowserRouter([
       {
         path: "/blogs",
         element: <Blogs></Blogs>,
+      },
+      {
+        path: "/portfolio",
+        element: <MyPortfolio></MyPortfolio>,
       },
       {
         path: "/purchase/:id",
@@ -147,6 +153,10 @@ export const router = createBrowserRouter([
             element: <ManageAllOrders />,
           },
         ],
+      },
+      {
+        path: "*",
+        element: <NotFound></NotFound>,
       },
     ],
   },
