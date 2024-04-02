@@ -9,12 +9,12 @@ const Testimonial = () => {
         </div>
       </div>
       <p className="desc  text-center font-mono px-3 mt-4 md:px-0 ">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum commodi
-        alias, nesciunt, quisquam dolorum incidunt ut nostrum soluta quos id
-        nemo distinctio illum. Culpa excepturi explicabo a voluptate
-        necessitatibus doloremque similique natus libero quis sint nobis rerum
-        non saepe suscipit, dolorem quod amet eligendi sapiente esse nihil
-        labore repellendus eum laboriosam error.
+        I am thoroughly impressed with ToolsMaster's innovative range of biking
+        tools. Led by Mohammed Amir Hamja, they provide an effortless experience
+        for cyclists of all levels. Their commitment to customer satisfaction is
+        unmatched, offering expert advice and prompt assistance. With
+        ToolsMaster, I've found top-quality equipment backed by unparalleled
+        expertise. It's my go-to destination for all my biking needs.
       </p>
       <p className="text-center mt-10 text-primary uppercase font-mono">
         ~ MOHAMMED AMIR HAMJA ~
