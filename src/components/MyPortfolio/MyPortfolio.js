@@ -98,53 +98,44 @@ const MyPortfolio = () => {
           />
         </div>
         {/* project-2 */}
-        <div className="Project-1">
-          <h3 className="text-2xl font-semibold">Juhi’s Fashion</h3>
+        <div className="Project-2 my-4">
+          <h3 className="text-2xl font-semibold">Lead Marketing Inc.</h3>
           <ul>
             <li className="list-disc font-mono ms-2">
-              Comprehensive e-commerce platform for Juhis Fashion, offering a
-              user-friendly interface
+              Comprehensive Portfolio platform for Lead Marketing Inc., offering
+              a user-friendly interface
             </li>
             <li className="list-disc font-mono ms-2">
-              Users can explore diverse product categories and view detailed
+              Users can explore diverse product services and view detailed
               product information.
             </li>
             <li className="list-disc font-mono ms-2">
-              Seamless shopping experience with the ability to add products to
-              the cart.
+              Seamless contact experience through contact form.
             </li>
             <li className="list-disc font-mono ms-2">
-              Advanced filtering options by brand, color, and price for a
-              tailored shopping experience.
-            </li>
-            <li className="list-disc font-mono ms-2">
-              Robust search functionality for quickly finding specific products.
-            </li>
-            <li className="list-disc font-mono ms-2">
-              Secure authentication using Auth0, enabling user login and logout.
+              Using Formspree for emailing contact.
             </li>
           </ul>
           <SkillCategory
             title="Technology"
             skills={[
+              "Vite Js",
               "React Js",
               "Tailwind Css",
               "Daisy UI",
+              "React-Icons",
               "Fromspree",
-              "Auth0",
-              "Express Js",
-              "MongoDB",
             ]}
           />
 
           <ContactItem
             title="Live Link:"
-            value="https://juhis-fashion.netlify.app/"
-            href="https://juhis-fashion.netlify.app/"
+            value="https://leadmarketingglobal.com/"
+            href="https://leadmarketingglobal.com/"
           />
         </div>
         {/* project-3 */}
-        <div className="Project-1 my-4">
+        <div className="Project-3 my-4">
           <h3 className="text-2xl font-semibold">Websites For All</h3>
           <ul>
             <li className="list-disc font-mono ms-2">
@@ -234,7 +225,12 @@ const ContactInfo = () => (
 const ContactItem = ({ title, value, href }) => (
   <p className="font-semibold">
     {title}:{" "}
-    <a className="text-blue-600" href={href}>
+    <a
+      className="text-blue-600"
+      href={href}
+      target="_blank"
+      rel="noopener noreferrer"
+    >
       {value}
     </a>
   </p>
