@@ -40,7 +40,9 @@ const Purchases = () => {
 
   useEffect(() => {
     const getParts = async () => {
-      const { data } = await axios.get(`http://localhost:5000/parts/${id}`);
+      const { data } = await axios.get(
+        `https://tools-master-server.vercel.app/parts/${id}`
+      );
       if (data) {
         console.log(data);
         setParts(data);
@@ -73,7 +75,7 @@ const Purchases = () => {
     console.log("order from purchase page", order);
 
     const { data: result } = await axiosPrivate.post(
-      "http://localhost:5000/order",
+      "https://tools-master-server.vercel.app/order",
       order
     );
     if (result.success) {

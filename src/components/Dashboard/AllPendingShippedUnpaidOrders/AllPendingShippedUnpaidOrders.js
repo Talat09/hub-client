@@ -8,7 +8,9 @@ import { toast } from "react-toastify";
 const AllPendingShippedUnpaidOrders = ({ searchText }) => {
   const [order, setOrder] = useState(null);
   const getOrders = async () => {
-    const { data } = await axiosPrivate.get("http://localhost:5000/order");
+    const { data } = await axiosPrivate.get(
+      "https://tools-master-server.vercel.app/order"
+    );
     return data;
   };
   const { data, isLoading, refetch } = useQuery("all-orders", getOrders);

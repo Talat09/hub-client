@@ -15,7 +15,7 @@ const CheckoutForm = ({ order }) => {
   useEffect(() => {
     const getClientSecret = async () => {
       const { data } = await axiosPrivate.post(
-        "http://localhost:5000/create-payment-intent",
+        "https://tools-master-server.vercel.app/create-payment-intent",
         order
       );
       setClientSecret(data.clientSecret);
@@ -66,7 +66,7 @@ const CheckoutForm = ({ order }) => {
       };
 
       const { data } = await axiosPrivate.put(
-        `http://localhost:5000/order/${_id}`,
+        `https://tools-master-server.vercel.app/order/${_id}`,
         payment
       );
       if (data.success) {

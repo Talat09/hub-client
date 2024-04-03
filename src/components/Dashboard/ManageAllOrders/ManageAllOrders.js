@@ -9,7 +9,9 @@ import { Link } from "react-router-dom";
 const ManageAllOrders = () => {
   const [order, setOrder] = useState(null);
   const getOrders = async () => {
-    const { data } = await axiosPrivate.get("http://localhost:5000/order");
+    const { data } = await axiosPrivate.get(
+      "https://tools-master-server.vercel.app/order"
+    );
     return data;
   };
   const { data, isLoading, refetch } = useQuery("all-orders", getOrders);
@@ -20,7 +22,7 @@ const ManageAllOrders = () => {
 
   const updateToShipped = async (_id) => {
     const { data } = await axiosPrivate.patch(
-      `http://localhost:5000/order/${_id}`
+      `https://tools-master-server.vercel.app/order/${_id}`
     );
     if (data.success) {
       refetch();
@@ -30,7 +32,7 @@ const ManageAllOrders = () => {
 
   const cancelOrderHandle = async (_id) => {
     const { data } = await axiosPrivate.delete(
-      `http://localhost:5000/order/${_id}`
+      `https://tools-master-server.vercel.app/order/${_id}`
     );
     if (data.success) {
       refetch();

@@ -9,7 +9,9 @@ const ManageProducts = () => {
   const [reqToDeleteProduct, setReqToDeleteProduct] = useState(null);
 
   const getUsers = async () => {
-    const { data } = await axiosPrivate.get("http://localhost:5000/parts");
+    const { data } = await axiosPrivate.get(
+      "https://tools-master-server.vercel.app/parts"
+    );
     return data;
   };
   const { data, isLoading, refetch } = useQuery("all-parts", getUsers);
@@ -20,7 +22,7 @@ const ManageProducts = () => {
 
   const deleteProductHandle = async (_id) => {
     const { data } = await axiosPrivate.delete(
-      `http://localhost:5000/parts/${_id}`
+      `https://tools-master-server.vercel.app/parts/${_id}`
     );
     if (data.success) {
       refetch();

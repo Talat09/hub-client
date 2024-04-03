@@ -28,14 +28,14 @@ const MyProfile = () => {
     };
 
     const { data } = await axiosPrivate.put(
-      `http://localhost:5000/user/update/${email}`,
+      `https://tools-master-server.vercel.app/user/update/${email}`,
       updatedField
     );
     if (data.success) {
       reset();
       toast.success(data.message, { toastId: "profile-updated1" });
       const { data: user } = await axiosPrivate.get(
-        `http://localhost:5000/user/${email}`
+        `https://tools-master-server.vercel.app/user/${email}`
       );
       setUserDetails(user.user);
     }

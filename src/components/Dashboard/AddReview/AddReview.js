@@ -19,7 +19,7 @@ const AddReview = () => {
     };
 
     const { data } = await axiosPrivate.post(
-      "http://localhost:5000/review",
+      "https://tools-master-server.vercel.app/review",
       review
     );
     if (data.success) {

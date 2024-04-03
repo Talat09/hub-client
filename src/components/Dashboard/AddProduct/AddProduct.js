@@ -32,7 +32,7 @@ const AddProduct = () => {
         image: imageUrl,
       };
       const { data: updatedData } = await axiosPrivate.post(
-        "http://localhost:5000/parts",
+        "https://tools-master-server.vercel.app/parts",
         newProduct
       );
       if (updatedData.success) {

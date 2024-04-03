@@ -7,7 +7,7 @@ const CancelModal = ({ order, refetch }) => {
 
   const orderCancelHandle = async () => {
     const { data } = await axiosPrivate.delete(
-      `http://localhost:5000/order/${_id}`
+      `https://tools-master-server.vercel.app/order/${_id}`
     );
     if (data.success) {
       refetch();

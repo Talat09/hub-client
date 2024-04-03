@@ -16,7 +16,7 @@ const Payment = () => {
 
   const getOrder = async ({ queryKey }) => {
     const { data } = await axiosPrivate.get(
-      `http://localhost:5000/order/${queryKey[1]}`
+      `https://tools-master-server.vercel.app/order/${queryKey[1]}`
     );
     console.log(data);
     return data;

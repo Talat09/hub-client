@@ -5,7 +5,9 @@ import { useQuery } from "react-query";
 import ReactStars from "react-rating-stars-component";
 const LastSixReview = () => {
   const getReviews = async () => {
-    const { data } = await axiosPrivate.get("http://localhost:5000/review");
+    const { data } = await axiosPrivate.get(
+      "https://tools-master-server.vercel.app/review"
+    );
     return data;
   };
 

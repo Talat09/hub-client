@@ -1,4 +1,4 @@
-# ToolsMaster ["Live link"]
+# [ToolsMaster](https://tools-master.netlify.app/)
 
 ---
 

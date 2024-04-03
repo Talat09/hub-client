@@ -7,7 +7,9 @@ import SetTitle from "../../Shared/SetTitle/SetTitle";
 
 const AllUsers = () => {
   const getUsers = async () => {
-    const { data } = await axiosPrivate.get("http://localhost:5000/user");
+    const { data } = await axiosPrivate.get(
+      "https://tools-master-server.vercel.app/user"
+    );
     return data;
   };
   const { data, isLoading, refetch } = useQuery("all-users", getUsers);
@@ -18,7 +20,7 @@ const AllUsers = () => {
 
   const makeAdminHandle = async (email) => {
     const { data } = await axiosPrivate.patch(
-      `http://localhost:5000/user/admin/${email}`
+      `https://tools-master-server.vercel.app/user/admin/${email}`
     );
     if (data.success) {
       refetch();
@@ -28,7 +30,7 @@ const AllUsers = () => {
 
   const removeUserHandle = async (email) => {
     const { data } = await axiosPrivate.delete(
-      `http://localhost:5000/user/${email}`
+      `https://tools-master-server.vercel.app/user/${email}`
     );
     if (data.success) {
       refetch();

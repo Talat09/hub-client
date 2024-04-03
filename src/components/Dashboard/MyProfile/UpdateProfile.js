@@ -34,7 +34,7 @@ const UpdateProfile = () => {
     };
 
     const { data } = await axiosPrivate.put(
-      `http://localhost:5000/user/update/${email}`,
+      `https://tools-master-server.vercel.app/user/update/${email}`,
       updatedData
     );
     if (data.success) {
